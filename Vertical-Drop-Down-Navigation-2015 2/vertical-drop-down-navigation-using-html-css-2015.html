@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vertical Drop-Down Navigation using HTML & CSS</title>
+<style type="text/css">
+* {padding:0; margin:0;}
+a {text-decoration: none;}
+li {list-style: none;}
+/* Navigation STyling */
+.main-nav {width: 250px; background: rgba(180,205,203,1.00);}
+.main-nav a {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #FFF;
+	display: block;
+	padding: 10px 0 10px 20px;
+	border-bottom: 1px dotted gray;
+}
+.main-nav a:hover {background: rgba(121,165,162,1.00);}
+.main-nav-ul ul {display: none;}
+.main-nav-ul li:hover ul {display: block;}
+
+.main-nav-ul ul a:before {
+	content: '\203A';
+	margin-right: 20px;
+}
+
+.main-nav .sub-arrow:after {
+	content: '\203A';
+	float: right;
+	margin-right: 20px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+}
+.main-nav li:hover .sub-arrow:after {
+	content: '\2039';
+}
+</style>
+</head>
+
+<body>
+
+<nav class="main-nav">
+	<ul class="main-nav-ul">
+   	<li><a href="#">Home</a></li>
+      
+      <li><a href="#">Products<span class="sub-arrow"></span></a>
+      	<ul>
+         	<li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+         </ul>
+      </li>
+      
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+   </ul>
+</nav>
+
+</body>
+</html>

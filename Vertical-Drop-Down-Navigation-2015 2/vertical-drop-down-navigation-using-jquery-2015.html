@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vertical Drop-Down Navigation using jQuery</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(e) {
+   $('.has-sub').click(function(){
+		$(this).toggleClass('tap');
+	});
+});
+
+</script>
+<style type="text/css">
+* {padding:0; margin:0;}
+.main-nav {width:250px; background: rgba(160,193,199,1.00);}
+.main-nav li {list-style: none;}
+.main-nav a {
+	color: #FFF;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	text-decoration: none;
+	display: block;
+	padding: 10px 0 10px 20px;
+	border-bottom: 1px dotted gray;
+}
+.main-nav a:hover {background: rgba(118,166,174,1.00);}
+.main-nav-ul ul {display: none;}
+.main-nav-ul li.tap ul {display: block;}
+
+.main-nav-ul ul a:before {
+	content: '\203A';
+	margin-right: 20px;
+}
+
+.main-nav .sub-arrow:after {
+	content: '\203A';
+	float: right;
+	margin-right: 20px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+}
+.main-nav li.tap .sub-arrow:after {
+	content: '\2039';
+}
+</style>
+</head>
+
+<body>
+
+<nav class="main-nav">
+	<ul class="main-nav-ul">
+   	<li><a href="#">Home</a></li>
+      
+      <li class="has-sub"><a href="#">Products<span class="sub-arrow"></span></a>
+      	<ul>
+         	<li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+         </ul>
+      </li>
+      
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+   </ul>
+</nav>
+
+</body>
+</html>
