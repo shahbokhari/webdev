@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D in CSS3 - 3D Stacking Concept</title>
+<style media="screen">
+	html {
+		box-sizing: border-box;
+	}
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		padding: 0;
+		margin: 0;
+		background-color: #EEE;
+		-webkit-font-smoothing: antialiased;
+	}
+	.container {
+		width: 300px;
+		height: 300px;
+		display: block;
+		border: 10px solid goldenrod;
+		position: relative;
+		background-color: gold;
+		margin: 250px auto;
+		/* Parent important */
+		-webkit-perspective: 500;
+		        perspective: 500;
+	}
+	.inner {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: white;
+		/* Child important */
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+
+		-webkit-transform: rotateY(0);
+
+		        transform: rotateY(0);
+
+		-webkit-animation: animate 5s linear infinite;
+
+		        animation: animate 5s linear infinite;
+
+		-webkit-transition: all 3s linear;
+
+		transition: all 3s linear;
+	}
+
+	@-webkit-keyframes animate {
+		to {
+			-webkit-transform: rotateY(-360deg);
+			        transform: rotateY(-360deg);
+		}
+	}
+
+	@keyframes animate {
+		to {
+			-webkit-transform: rotateY(-360deg);
+			        transform: rotateY(-360deg);
+		}
+	}
+
+/*
+	.container:hover .inner {
+		transform: rotateY(180deg)
+	}
+*/
+
+	/* objects style */
+	.object-1,
+	.object-2,
+	.object-3,
+	.object-4,
+	.object-5,
+	.object-6,
+	.object-7,
+	.object-8,
+	.object-9,
+	.object-0
+		{
+		line-height: 1.6;
+		position: absolute;
+		font-size: 10em;
+		text-align: center;
+		color: crimson;
+	}
+	.object-1 {
+		-webkit-transform: translateZ(0px) translateX(100px);
+		        transform: translateZ(0px) translateX(100px);
+	}
+	.object-2 {
+		-webkit-transform: translateZ(50px) translateX(100px);
+		        transform: translateZ(50px) translateX(100px);
+	}
+	.object-3 {
+		-webkit-transform: translateZ(100px) translateX(100px);
+		        transform: translateZ(100px) translateX(100px);
+	}
+	.object-4 {
+		-webkit-transform: translateZ(150px) translateX(100px);
+		        transform: translateZ(150px) translateX(100px);
+	}
+	.object-5 {
+		-webkit-transform: translateZ(200px) translateX(100px);
+		        transform: translateZ(200px) translateX(100px);
+	}
+	.object-6 {
+		-webkit-transform: translateZ(250px) translateX(100px);
+		        transform: translateZ(250px) translateX(100px);
+	}
+	.object-7 {
+		-webkit-transform: translateZ(300px) translateX(100px);
+		        transform: translateZ(300px) translateX(100px);
+	}
+	.object-8 {
+		-webkit-transform: translateZ(350px) translateX(100px);
+		        transform: translateZ(350px) translateX(100px);
+	}
+	.object-9 {
+		-webkit-transform: translateZ(400px) translateX(100px);
+		        transform: translateZ(400px) translateX(100px);
+	}
+	.object-0 {
+		-webkit-transform: translateZ(450px) translateX(100px);
+		        transform: translateZ(450px) translateX(100px);
+	}
+</style>
+</head>
+<body>
+
+	<section class="container">
+		<section class="inner">
+			<span class="object-1">1</span>
+			<span class="object-2">2</span>
+			<span class="object-3">3</span>
+			<span class="object-4">4</span>
+			<span class="object-5">5</span>
+			<span class="object-6">6</span>
+			<span class="object-7">7</span>
+			<span class="object-8">8</span>
+			<span class="object-9">9</span>
+			<span class="object-0">0</span>
+		</section>
+	</section>
+
+</body>
+</html>
