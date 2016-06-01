@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<meta name="author" content="S A Bokhari">
+<meta name="description" content="Slide Up/Down Responsive Navigation">
+<meta name="keywords" content="Slide Up/Down Responsive Navigation">
+<title>Slide Up/Down Responsive Navigation</title>
+<style type="text/css">
+* { padding: 0; margin: 0; }
+body { font-family: sans-serif; }
+a { text-decoration: none; color: #00A5CC; font-size: 14px; }
+li { list-style-type: none; }
+header {
+	width: 100%;
+	height: 50px;
+	margin: auto;
+	border-bottom: 1px solid #EEE;
+	background: #FFF;
+	z-index: 99;
+}
+#brnad {
+	float: left;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #E5DAC0;
+}
+nav { width: 100%; text-align: center; }
+nav ul { line-height: 50px; }
+nav li { display: inline-block; }
+nav a { padding: 10px; color: #F6F3EB; }
+nav a:hover { background: #DFD2B3; color: #FCFCFC; border-radius: 5px; }
+
+/*--------------------------------------------------*/
+
+.menu {
+	width: 100%;
+	height: 50px;
+	background: #E5DAC0;
+	position: absolute;
+	top: -50px;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.menu-icon {
+	float: right;
+	padding: 10px 20px;
+	color: #C7AF78;
+	background: #E5DAC0;
+	border-radius: 5px;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+	z-index: 99;
+}
+.menu-icon:hover { color: #F5F5F5; }
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; top: 51px; }
+
+/*--------------------------------------------------*/
+
+@media screen and (max-width: 480px){
+	nav li { display: block; }
+	nav a { display: block; border-bottom: 1px solid #DFD2B3; padding: 0; }
+	nav a:hover { border-radius: 0; }
+	.menu { height: auto; top: -350px; }
+}
+</style>
+</head>
+
+<body>
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+<header>
+<div id="brnad">BRAND</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">INSPIRATION</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+</body>
+</html>

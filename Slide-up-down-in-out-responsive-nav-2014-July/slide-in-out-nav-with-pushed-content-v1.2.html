@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="S A Bokhari">
+<meta name="description" content="Slide In/Out Navigation with Pushed Content">
+<meta name="keywords" content="Slide In/Out Navigation with Pushed Content">
+<title>Slide In/Out Navigation with Pushed Content</title>
+<style type="text/css">
+
+* { padding: 0; margin: 0; }
+body { font-family: sans-serif; overflow: hidden; }
+a { text-decoration: none; color: #00A5CC; }
+li { list-style-type: none; }
+
+header { 
+	width: 100%; 
+	height: 50px; 
+	margin: auto;
+	border-bottom: 1px solid #EEE;
+}
+#brand {
+	float: left;
+	line-height: 50px;
+	color: #E5DAC0;
+	font-size: 25px;
+	font-weight: bolder;
+}
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px 0;
+	border-bottom: 1px solid #C3AA6E;
+	color: #F0EADC;
+}
+nav a:hover { background: #E5DAC0; color: #FFF; }
+nav li:last-child a { border-bottom: none; }
+
+/*-----------------------------------------*/
+
+.menu {
+	width: 240px;
+	height: 100%;
+	position: absolute;
+	background: #D9C9A3;
+	left: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	
+}
+.menu-icon {
+	padding: 10px 20px;
+	background: #E5DAC0;
+	color: #987D3E;
+	cursor: pointer;
+	float: right;
+	margin-top: 4px;
+	border-radius: 5px;
+}
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; left: 0; }
+
+#menuToggle:checked ~ .content { position: absolute; left: 260px; }
+
+.content {
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+
+<header>
+<div id="brand">Slide In/Out Navigation</div>
+</header>
+
+<nav class="menu">
+	<ul>
+    	<li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">INSPIRATION</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+<h2>Slide In/Out Content</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
+
+</div>
+
+</body>
+</html>

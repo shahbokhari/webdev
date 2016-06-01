@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="S A Bokhari">
+<meta name="description" content="Slide Up/Down Responsive Navigation with Pushed Down Content">
+<meta name="keywords" content="Slide Up/Down Responsive Navigation with Pushed Down Content">
+<title>Slide Up/Down Responsive Navigation with Pushed Down Content</title>
+<style type="text/css">
+* { padding: 0; margin: 0; }
+body { font-family: sans-serif; }
+a { text-decoration: none; color: #00A5CC; font-size: 14px; }
+li { list-style-type: none; }
+header {
+	width: 100%;
+	height: 50px;
+	margin: auto;
+	border-bottom: 1px solid #EEE;
+	background: #FFF;
+	z-index: 99;
+}
+#brnad {
+	float: left;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #E5DAC0;
+}
+nav { width: 100%; text-align: center; }
+nav ul { line-height: 50px; }
+nav li { display: inline-block; }
+nav a { padding: 10px; color: #F6F3EB; }
+nav a:hover { background: #DFD2B3; color: #FCFCFC; border-radius: 5px; }
+
+/*--------------------------------------------------*/
+
+.menu {
+	width: 100%;
+	height: 50px;
+	background: #E5DAC0;
+	position: absolute;
+	top: -50px;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.menu-icon {
+	float: right;
+	padding: 10px 20px;
+	color: #C7AF78;
+	background: #E5DAC0;
+	border-radius: 5px;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+	z-index: 99;
+}
+.menu-icon:hover { color: #F5F5F5; }
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; top: 51px; }
+
+#menuToggle:checked ~ .content { position: absolute; top: 120px; }
+
+.content {
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 60px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+
+/*--------------------------------------------------*/
+
+@media screen and (max-width: 480px){
+	nav li { display: block; }
+	nav a { display: block; border-bottom: 1px solid #DFD2B3; padding: 0; }
+	nav a:hover { border-radius: 0; }
+	.menu { height: auto; top: -350px; }
+	
+	#menuToggle:checked ~ .content { position: absolute; top: 370px; }
+	
+}
+</style>
+</head>
+
+<body>
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+<header>
+<div id="brnad">BRAND</div>
+</header>
+<nav class="menu">
+	<ul>
+    	<li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">INSPIRATION</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+<h2>Slide Up/Down Navigation with Pushed Content</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
+</p>
+</div>
+
+</body>
+</html>
