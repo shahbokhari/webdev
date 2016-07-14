@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Grid System 2016</title>
+<style media="screen">
+	html {box-sizing: border-box;}
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		font-family: "Source Sans Pro", Sans-Serif;
+		font-size: 1.2em;
+		line-height: 1.375em;
+		padding: 0;
+		margin: 0;
+		background-color: #FFF;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	/* ___-_-_-_-_-_-__ Flexbox Grid System 2016 __-_-_-_-_-_-___ */
+
+
+	/* Parent is .row */
+	.row {display: flex; flex-direction: column;}
+	/* Child is .col */
+	.col {
+		flex: 1;
+		padding: .6em;
+		margin: .6em; /* important */
+
+		color: #FFF;
+		background-color: hsla(195, 60%, 50%, 1);
+	}
+
+	@media screen and (min-width: 500px){
+		.row {display: flex; flex-direction: row;}
+	}
+
+
+
+</style>
+</head>
+<body>
+
+	<div class="row">
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+		<div class="col">col</div>
+	</div>
+
+	<div class="row">
+		<div class="col">col</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
